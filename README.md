@@ -4,7 +4,7 @@ Simple flask webapp to demo framework
 
 1. Clone the repository
 ```
-git clone 
+git clone https://github.com/mejohn/flask-test.git 
 ```
 2. Create a virtual environment
 ```
@@ -26,5 +26,5 @@ flask run
 
 * http://127.0.0.1:5000/ "Hello, World!"
 * http://127.0.0.1:5000/stats Generates a random numpy array and calculates scipy descriptive statistics on it.
-* http://127.0.0.1:5000/hello/<name> where `<name>` is any string. "Hello <name>"
+* http://127.0.0.1:5000/hello/Mike where `Mike` can be any string. "Hello Mike"
 * http://127.0.0.1:5000/sum shows a form with 2 inputs and will return the sum of two numbers.
