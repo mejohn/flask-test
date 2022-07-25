@@ -24,7 +24,7 @@ flask run
 
 # Pages Accessible
 
-http://127.0.0.1:5000/ "Hello, World!"
-http://127.0.0.1:5000/stats Generates a random numpy array and calculates scipy descriptive statistics on it.
-http://127.0.0.1:5000/hello/<name> where `<name>` is any string. "Hello <name>"
-http://127.0.0.1:5000/sum shows a form with 2 inputs and will return the sum of two numbers.
+* http://127.0.0.1:5000/ "Hello, World!"
+* http://127.0.0.1:5000/stats Generates a random numpy array and calculates scipy descriptive statistics on it.
+* http://127.0.0.1:5000/hello/<name> where `<name>` is any string. "Hello <name>"
+* http://127.0.0.1:5000/sum shows a form with 2 inputs and will return the sum of two numbers.

@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+from flask import request
 
 import numpy as np
 from scipy import stats
@@ -48,7 +49,7 @@ def describe_stats():
 
 
 """
-Uses a template instead of writing html in python. Template is located at "templates/sum.html"
+Uses a template instead of writing html in python. Template is located at "templates/hello.html"
 """
 @app.route("/hello")
 @app.route("/hello/<name>")
@@ -57,4 +58,17 @@ def hello(name=None):
 
 """
 POST demo for taking input from user and returning sum of 2 numbers.
+Templates are located at "templates/sum.html" and "templates/sum_form.html"
 """
+@app.route("/sum", methods=["GET", "POST"])
+def sum_data():
+    if request.method == "POST":
+        if request.form['num1'] and request.form['num2']:
+            num1 = int(request.form['num1'])
+            num2 = int(request.form['num2'])
+            num_sum = num1 + num2
+            return render_template("sum.html", num1=num1, num2=num2, sum=num_sum)
+        else:
+            return render_template("sum_form.html", error="Please input two numbers")
+    else:
+        return render_template("sum_form.html")
